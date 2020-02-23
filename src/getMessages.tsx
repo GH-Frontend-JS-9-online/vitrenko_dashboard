@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const getMessages = () => {
+export const messages = () => {
     return(
         <section className="main_content">    
             <div className="options">

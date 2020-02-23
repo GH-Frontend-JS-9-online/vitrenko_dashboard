@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import label from './zig-zag.png'
 import {Output} from './output';
-import {getMessages} from './getMessages'
-
-const m = (event: MouseEvent) => {
-}
 
 function App() {
+  const [id, setId] = useState<string>('');
+
+  const outputContent = (id: string): void => {
+    setId(id)
+  }
+
   return (
     <>
       <header>
@@ -20,14 +22,14 @@ function App() {
 
       <main>
         <aside className="menu">
-            <button id="home"><i className="fas fa-home"></i></button>
-            <button id="menu"><i className="fas fa-bars"></i></button>
-            <button id="graffic"><img src={label} alt=""/></button>
-            <button id="messages" onClick={m}><i className="fas fa-envelope"></i></button>
-            <button id="friends"><i className="fas fa-user-friends"></i></button>
+            <button id="home" onClick={() => outputContent('home')}><i className="fas fa-home"></i></button>
+            <button id="menu" onClick={() => outputContent('menu')}><i className="fas fa-bars"></i></button>
+            <button id="graffic" onClick={() => outputContent('graffic')}><img src={label} alt=""/></button>
+            <button id="messages" onClick={() => outputContent('messages')}><i className="fas fa-envelope"></i></button>
+            <button id="friends" onClick={() => outputContent('friends')}><i className="fas fa-user-friends"></i></button>
         </aside>
 
-        <Output />
+        <Output id = {id}/>
       </main>
     </>
   );
