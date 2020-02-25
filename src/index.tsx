@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './css/messages.css'
 import './css/graffic.css'
-import './main.jsx'
+import './js/design.js'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

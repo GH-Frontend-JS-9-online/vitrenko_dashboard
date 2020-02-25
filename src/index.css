@@ -114,7 +114,6 @@ main {
 }
 
 .menu img {
-  color: #737aa1;
   width: 35%;
   transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -128,4 +127,8 @@ main {
 
 main {
   background-color: #2b2d3c;
+}
+
+button {
+  outline: none
 }
