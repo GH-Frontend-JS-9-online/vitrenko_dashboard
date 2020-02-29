@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.css';
 import label from './zig-zag.png'
 import {Output} from './output';
-import { design } from './js/design';
 import light_label from './light-zig-zag.png';
 export {light_label, label}
 
@@ -25,11 +24,11 @@ function App() {
 
       <main>
         <aside className="menu">
-            <button id="home" onClick={() => outputContent('home')}><i className="fas fa-home" id="h_icon" onClick={() => design('h_icon')}></i></button>
-            <button id="menu" onClick={() => outputContent('menu')}><i className="fas fa-bars" id="m_icon" onClick={() => design('m_icon')}></i></button>
-            <button id="graffic" onClick={() => outputContent('graffic')}><img src={label} alt="" id="g_icon" onClick={() => design('g_icon')}/></button>
-            <button id="messages" onClick={() => outputContent('messages')}><i className="fas fa-envelope" id="mes_icon" onClick={() => design('mes_icon')}></i></button>
-            <button id="friends" onClick={() => outputContent('friends')}><i className="fas fa-user-friends" id="f_icon" onClick={() => design('f_icon')}></i></button>
+            <button id="home" onClick={() => outputContent('home')}><i className="fas fa-home" id="h_icon" ></i></button>
+            <button id="menu" onClick={() => outputContent('menu')}><i className="fas fa-bars" id="m_icon" ></i></button>
+            <button id="graffic" onClick={() => outputContent('graffic')}><img src={label} alt="" id="g_icon" /></button>
+            <button id="messages" onClick={() => outputContent('messages')}><i className="fas fa-envelope" id="mes_icon" ></i></button>
+            <button id="friends" onClick={() => outputContent('friends')}><i className="fas fa-user-friends" id="f_icon" ></i></button>
         </aside>
 
         <Output id = {id}/>
