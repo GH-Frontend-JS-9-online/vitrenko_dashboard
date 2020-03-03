@@ -11,7 +11,7 @@ export function design(id) {
     
     if (document.getElementById(id).nodeName === 'IMG') {
         document.getElementById(id).src = light_label
-        setTimeout(correctWidth, 5)
+        setTimeout(correctWidth, 1)
     }
     else {
         document.getElementById(id).style.color = '#fbfbfc'

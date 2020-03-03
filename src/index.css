@@ -9,6 +9,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #2f3242;
+  width: 100vw;
 }
 
 body {
@@ -30,10 +31,12 @@ body {
 
 .label_decoration {
   color: #3498DB;
+  margin: 0 2%;
+  font-weight: 500;
 }
 
 .adding {
-  margin-left: 65%;
+  margin-left: auto;
   border: 1px solid #3498DB;
   border-radius: 20px;
   padding: 0.7% 1.5%;
@@ -43,7 +46,7 @@ body {
 
 button {
   margin-left: 0%;
-  margin-right: 1%;
+  margin-right: 2%;
   color: white;
   text-align: center;
   background-color: inherit;
@@ -90,7 +93,8 @@ button {
 main {
   display: grid;
   grid-template-columns: 1fr 20fr;
-  flex-grow: 5;
+  flex-grow: 20;
+  background-color: #2b2d3c;
 }
 
 .menu i {
@@ -109,8 +113,6 @@ main {
 
 .menu {
   background: linear-gradient(90deg, rgba(43,45,60,1) 0%, rgba(43,45,62,1) 2%, rgba(47,50,66,1) 100%);
-  /*padding-left: 25%;*/
-  display: block;
 }
 
 .menu img {
@@ -120,14 +122,10 @@ main {
   -webkit-transform: rotate(45deg);
 }
 
-#graffic {
+/*#graffic {
   font-size: 200%;
   font-weight: bold;
-}
-
-main {
-  background-color: #2b2d3c;
-}
+}*/
 
 button {
   outline: none

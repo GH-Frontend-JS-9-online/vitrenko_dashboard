@@ -1,27 +1,26 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css';
-import label from './zig-zag.png'
 import {Output} from './output';
-import light_label from './light-zig-zag.png';
+import { Header } from './Header';
+import label from './zig-zag.png'
+import light_label from './light-zig-zag.png'
 export {light_label, label}
 
-function App() {
-  const [id, setId] = useState<string>('');
 
-  const outputContent = (id: string): void => {
-    setId(id)
+function App() {
+  
+  const [id, setId] = useState<string>('')
+
+  const outputContent = (id: string) => {
+      setId(id)
   }
 
   return (
     <>
-      <header>
-        <label className="label">v<span className="label_decoration">/</span>irtus</label>
-        <button className="adding">Add <span className="plus">+</span></button>
-        <button className="search"><i className="fas fa-search"></i></button>
-        <button className="notifications"><i className="far fa-bell"></i></button>
-        <label className="icon"><img src = "./img/label.png" alt="User icon" /><span className="arrow_down"></span></label> 
-      </header>
-
+      <Router>
+      <Route path="/" component = {Header} />
+      
       <main>
         <aside className="menu">
             <button id="home" onClick={() => outputContent('home')}><i className="fas fa-home" id="h_icon" ></i></button>
@@ -33,6 +32,7 @@ function App() {
 
         <Output id = {id}/>
       </main>
+      </Router>
     </>
   );
 }
