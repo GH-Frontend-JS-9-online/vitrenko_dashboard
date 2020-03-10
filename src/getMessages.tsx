@@ -1,6 +1,7 @@
 import React from 'react'
+import label from './img/label.png'
 
-export const messages = () => {
+export const Messages: React.FC = () => {
     return(
         <section className="main_content">    
             <div className="options">
@@ -18,7 +19,7 @@ export const messages = () => {
                 <div className="chat_list">
                     <div className="chat_list_element">
                         <div>
-                            <img src="./img/label.png" alt="" className="users_icons" />
+                            <img src={label} alt="" className="users_icons" />
                             <h3 className="user_name">Michelle Stewart</h3>
                             <span className="date">12:00</span>
                         </div>
@@ -28,7 +29,7 @@ export const messages = () => {
                 </div>
                 <section className="chat"></section>
                 <div className="info">
-                    <img src="./img/label.png" alt="User's icon" className="icon" />
+                    <img src={label} alt="User's icon" className="icon" />
                     <span className="user_info" id="status"></span>
                     <span className="user_info" id="description"></span>
                     <span className="user_info" id="email">Email</span>

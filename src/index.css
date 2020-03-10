@@ -100,15 +100,16 @@ main {
 .menu i {
   color: #737aa1;
   font-size: 130%;
-  margin: 0 auto;
+  margin: 0;
 }
 
-.menu button {
+.menu a {
   cursor: pointer;
   padding: 0;
   border: none;
   display: block;
   margin: 75% auto;
+  text-align: center;
 }
 
 .menu {
@@ -121,11 +122,6 @@ main {
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-
-/*#graffic {
-  font-size: 200%;
-  font-weight: bold;
-}*/
 
 button {
   outline: none

@@ -118,7 +118,7 @@
     box-sizing: border-box;
     border-bottom: 1px solid #4d5060;
     height: 25%;
-    padding: 5% 5% 10% 10%;
+    padding: 5% 5% 20% 7%;
     font-size: 85%;
     color: #fbfbfc;
     letter-spacing: 0.75px;
@@ -133,8 +133,9 @@
   }
   
   .last_message {
-    margin-top: 7%;
+    margin-top: 5%;
     letter-spacing: 1px;
+    margin-bottom: 5%;
   }
   
   .date {

@@ -1,37 +1,39 @@
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React from 'react';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import {Output} from './output';
 import { Header } from './Header';
 import label from './zig-zag.png'
 import light_label from './light-zig-zag.png'
+import {Messages} from './getMessages'
+import { Graffic } from './getGraffic';
+import { SideBar } from './SideBar';
 export {light_label, label}
 
 
 function App() {
-  
-  const [id, setId] = useState<string>('')
-
-  const outputContent = (id: string) => {
-      setId(id)
-  }
 
   return (
     <>
       <Router>
-      <Route path="/" component = {Header} />
+      <Header />
       
       <main>
-        <aside className="menu">
-            <button id="home" onClick={() => outputContent('home')}><i className="fas fa-home" id="h_icon" ></i></button>
-            <button id="menu" onClick={() => outputContent('menu')}><i className="fas fa-bars" id="m_icon" ></i></button>
-            <button id="graffic" onClick={() => outputContent('graffic')}><img src={label} alt="" id="g_icon" /></button>
-            <button id="messages" onClick={() => outputContent('messages')}><i className="fas fa-envelope" id="mes_icon" ></i></button>
-            <button id="friends" onClick={() => outputContent('friends')}><i className="fas fa-user-friends" id="f_icon" ></i></button>
-        </aside>
+        <SideBar />
 
-        <Output id = {id}/>
+        <Switch>
+        <Route path="/messages">
+          <Messages />
+        </Route>
+        <Route path="/graffic">
+          <Graffic />
+        </Route>
+        <Route path="/friends"></Route>
+        <Route path="/menu"></Route>
+        <Route path="/home"></Route>
+      </Switch>
       </main>
+
+      
       </Router>
     </>
   );

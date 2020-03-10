@@ -1,15 +1,31 @@
 import React from 'react'
+import {CircularProgressbar} from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css';
 
-export const graffic = () => {
+let persent: number = 66
+
+export const Graffic: React.FC = () => {
     return(
         <section className="graffic">
             <div className="statistic">
                 <div className="progress">
 
                     <div className="container">
-                        <svg>
-                            <circle className="progress" id="views" r="30" cx="35" cy="40" fill="transparent"></circle>
-                        </svg>
+                        <CircularProgressbar value = {persent} maxValue = {100} text = {`${persent}`} 
+                        styles = {{
+
+                            path: {
+                                stroke: 'rgb(28, 128, 208)',
+                            },
+
+                            text: {
+                                fill: 'rgb(28, 128, 208)',
+                                fontSize: '150%',
+                                fontWeight: 'bold',
+                            },                           
+
+                        }}
+                        />
 
                         <div className="text">
                             <span className="description" id="views_amount"></span>
@@ -18,9 +34,22 @@ export const graffic = () => {
                     </div>
 
                     <div className="container">
-                        <svg>
-                            <circle className="progress" id="visitors" r="30" cx="35" cy="40" fill="transparent"></circle>
-                        </svg>
+                    <CircularProgressbar value = {persent} maxValue = {100} text = {`${persent}`}
+                    styles = {{
+
+                        path: {
+                            stroke: 'rgb(28, 128, 208)',
+                        },
+
+                        text: {
+                            fill: 'rgb(28, 128, 208)',
+                            fontSize: '150%',
+                            fontWeight: 'bold',
+                        },                           
+
+                    }}
+                    />
+
 
                         <div className="text">
                             <span className="description" id="visitors_amount"></span>
@@ -29,9 +58,22 @@ export const graffic = () => {
                     </div>
 
                     <div className="container">
-                        <svg>
-                            <circle className="progress" id="impressions" r="30" cx="35" cy="40" fill="transparent"></circle>
-                        </svg>
+                    <CircularProgressbar value = {persent} maxValue = {100} text = {`${persent}`} 
+                    styles = {{
+
+                        path: {
+                            stroke: 'rgb(28, 128, 208)',                            
+                        },
+
+                        text: {
+                            fill: 'rgb(28, 128, 208)',
+                            fontSize: '150%',
+                            fontWeight: 'bold',
+                        },                           
+
+                    }}
+                    />
+
 
                         <div className="text">
                             <span className="description" id="impressions_amount"></span>
