@@ -1,58 +1,51 @@
 .statistic {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1.5%;
-    margin-left: 2%;
-    margin-right: 0%;
-    color: #9ea3b4;
-  }
-  
-  circle {
-    stroke-width: 3px;
-    stroke: rgb(28, 128, 208);
-    stroke-dashoffset: 0;
-  }
-  
-  .filter_graffic span {
-    display: inline-block;
-    font-size: 82%;
-    font-weight: 600;
-    margin-top: 15%;
-    margin-bottom: auto;
-    letter-spacing: 0.75px;
-  }
-  
-  select {
-    display: inline-block;
-    background-color: inherit;
-    color: inherit;
-    border-radius: 20px;
-    padding: 2% 7%;
-    padding-right: 20%;
-    margin-left: 5%;
-    margin-bottom: auto;
-    letter-spacing: 0.75px;
-    font-weight: 600;
-  }
-  
-  .filter_graffic { 
-    width: 15%;
-  } 
-  
-  .progress {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 43%;
+    align-items: center;
+    margin-top: 1.5%;
+    padding-left: 0%;
+    margin-right: 0%;
+    color: #9ea3b4;
+  }
+
+  .filter_label {
+    font-size: 82%;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    margin-right: 0.75%;
+    margin-left: auto;
+  }
+
+  .statistic select {
+    outline: none;
+    box-sizing: border-box;
+    min-width: 10%;
+    background-color: inherit;
+    color: #9ea3b4;
+    border-radius: 20px;
+    padding: 0.3% 1%;
+    padding-right: 4%;
+    letter-spacing: 0.75px;
+    font-weight: 600;
+    margin-right: 3%;
+  }
+
+  svg, path {
+    max-width: 70px;
+  }
+  
+  .progress {
+    display: grid;
+    margin-left: 2%;
   }
   
   .container {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    width: 33%;
     padding: auto 0;
+    margin-left: 2%;
   }
   
   .text {

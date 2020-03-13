@@ -82,14 +82,12 @@ export const Graffic: React.FC = () => {
                     </div> 
                 </div>
 
-                <div className="filter_graffic">
-                    <span>Show:</span>
+                    <span className="filter_label">Show:</span>
 
                     <select name="filter" id="">
-                        <option>Week</option>
+                        <option defaultChecked>Week</option>
                         <option>Month</option>
                     </select>
-                </div>
             </div>
 
             <div className="diagrams"></div>
