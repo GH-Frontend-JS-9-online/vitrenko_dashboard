@@ -1,74 +1,78 @@
 .statistic {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 1.5%;
-    padding-left: 0%;
-    margin-right: 0%;
-    color: #9ea3b4;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5%;
+  padding-left: 0%;
+  margin-right: 0%;
+  color: #9ea3b4;
+}
 
-  .filter_label {
-    font-size: 82%;
-    font-weight: 600;
-    letter-spacing: 0.75px;
-    margin-right: 0.75%;
-    margin-left: auto;
-  }
+.filter_label {
+  font-size: 82%;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  margin-right: 0.75%;
+  margin-left: auto;
+}
 
-  .statistic select {
-    outline: none;
-    box-sizing: border-box;
-    min-width: 10%;
-    background-color: inherit;
-    color: #9ea3b4;
-    border-radius: 20px;
-    padding: 0.3% 1%;
-    padding-right: 4%;
-    letter-spacing: 0.75px;
-    font-weight: 600;
-    margin-right: 3%;
-  }
+.statistic select {
+  outline: none;
+  box-sizing: border-box;
+  min-width: 10%;
+  background-color: inherit;
+  color: #9ea3b4;
+  border-radius: 20px;
+  padding: 0.3% 1%;
+  padding-right: 4%;
+  letter-spacing: 0.75px;
+  font-weight: 600;
+  margin-right: 3%;
+}
 
-  svg, path {
-    max-width: 70px;
-  }
+svg{
+  min-width: 5.25%;
+  max-width: 6%; /*ограничение ширины svg элемента*/
+}
   
-  .progress {
-    display: grid;
-    margin-left: 2%;
-  }
+.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 2%;
+  box-sizing: border-box;
+}
   
-  .container {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    padding: auto 0;
-    margin-left: 2%;
-  }
+.container {
+  display: inline-grid;
+  margin-left: 5%;
+  box-sizing: border-box;
+}
   
-  .text {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 10%;
-  }
+.text {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 0.75%;
+  margin-right: 3%;
+}
   
-  .text span {
-    display: block;
-  }
+.text span {
+  display: block;
+}
   
-  .description {
-    color: #fbfbfc;
-    font-size: 100%;
-    font-weight: bold;
-  }
+.description {
+  color: #fbfbfc;
+  font-size: 100%;
+  font-weight: bold;
+}
   
-  .category {
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 90%;
-    font-weight: 600;
-  }
+.category {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 90%;
+  font-weight: 600;
+}

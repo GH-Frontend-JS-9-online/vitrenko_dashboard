@@ -1,5 +1,5 @@
 import {light_label, label} from '../App'
-import { correctWidth } from './graffic'
+import { correctFloat } from './messages'
 
 export function design(id) {
 
@@ -11,7 +11,10 @@ export function design(id) {
     
     if (document.getElementById(id).nodeName === 'IMG') {
         document.getElementById(id).src = light_label
-        setTimeout(correctWidth, 1)
+    }
+    else if (id === 'messages') {
+        setTimeout(correctFloat, 1)
+        document.getElementById(id).style.color = '#fbfbfc'
     }
     else {
         document.getElementById(id).style.color = '#fbfbfc'
