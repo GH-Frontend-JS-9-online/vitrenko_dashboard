@@ -1,5 +1,4 @@
 import {light_label, label} from '../App'
-import { correctFloat } from './messages'
 
 export function design(id) {
 
@@ -13,7 +12,6 @@ export function design(id) {
         document.getElementById(id).src = light_label
     }
     else if (id === 'messages') {
-        setTimeout(correctFloat, 1)
         document.getElementById(id).style.color = '#fbfbfc'
     }
     else {

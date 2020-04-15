@@ -3,6 +3,8 @@ import label from './img/label.png'
 
 export const Messages: React.FC = () => {
 
+    const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
     const ref = useRef<HTMLInputElement>(null);
 
     function send(event: React.KeyboardEvent<HTMLInputElement>) {
@@ -11,19 +13,34 @@ export const Messages: React.FC = () => {
             let chat = document.getElementById('message');
 
             const message = ref.current!.value;
-            ref.current!.value = ''
+            ref.current!.value = '';
 
-            let div = document.createElement('div')
-            div.classList.add('my_message')
+            let div = document.createElement('div');
+            div.classList.add('my_message');
 
-            let p = document.createElement('p')
-            p.classList.add('message_text')
+            let p = document.createElement('p');
+            p.classList.add('message_text');
+            p.innerHTML = message;
 
-            p.innerHTML = message
+            let span = document.createElement('span');
+            span.classList.add('time')
+            let timeOfSending = new Date();
+            let day = timeOfSending.getDate();
+            let month = timeOfSending.getMonth();
+            let hours = timeOfSending.getHours();
+            let minutes = timeOfSending.getMinutes();
+            let ampm = hours >= 12 ? 'PM' : 'AM';
 
-            div.appendChild(p)
+            hours = ampm === 'PM' ? hours-12 : hours;
 
-            chat!.appendChild(div)
+            span.innerHTML = day + ' ' + months[month] + ' ' + hours + ':' + minutes + ' ' + ampm;
+
+            div.appendChild(p);
+            div.appendChild(span)
+
+            chat!.appendChild(div);
+
+            chat!.scrollTop = 100000
 
             let margin_left: number = div.offsetWidth - p.offsetWidth - div.offsetWidth*0.03;
 
@@ -61,7 +78,11 @@ export const Messages: React.FC = () => {
                     <section className="messages" id="message">
                         <div className="my_message">
                             <p className="message_text">Id nulla labore aliquip veniam velit ad dolore ullamco ad quis. Cillum irure occaecat mollit officia. Enim veniam aliquip Lorem incididunt ut reprehenderit Lorem amet duis enim cupidatat proident.</p>
-                            <span className="time"></span>
+                            <span className="time">dvdvdsfvdsf</span>
+                        </div>
+                        <div className="companion_message">
+                            <p className="message_text">Officia in dolor mollit sint cillum proident. Labore aute tempor eiusmod ut in laborum qui. Do ex officia aliquip laboris commodo non minim et. Do irure cillum ut ullamco duis qui ullamco ex aute nulla. Mollit consectetur sit ut sunt.</p>
+                            <span className="time">sdsvvfdf</span>
                         </div>
                     </section>
                     <div className="input">
